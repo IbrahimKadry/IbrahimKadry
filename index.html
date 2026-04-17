@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Ibrahim El-Kadry | Front-End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Space Grotesk', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor Follower - Desktop Only -->
+    <div class="cursor-follower" id="cursor"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">Ibrahim</span>
+                <span class="logo-dot"></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-content">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                <span>Available for opportunities</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line reveal-up" style="--delay: 0.1s">Ibrahim</span>
+                <span class="title-line reveal-up" style="--delay: 0.2s">El-Kadry</span>
+            </h1>
+            <p class="hero-subtitle reveal-up" style="--delay: 0.3s">
+                Front-End Developer crafting <span class="highlight">responsive</span>, 
+                <span class="highlight">user-friendly</span> digital experiences
+            </p>
+            <div class="hero-cta reveal-up" style="--delay: 0.4s">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-stats reveal-up" style="--delay: 0.5s">
+                <div class="stat">
+                    <span class="stat-number" data-count="4">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-label">Years</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag scroll-reveal">Introduction</span>
+                <h2 class="section-title scroll-reveal">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content scroll-reveal">
+                    <p class="about-text lead">
+                        I'm a results-driven <span class="highlight">Front-End Developer</span> 
+                        specializing in HTML, CSS, JavaScript, C++, and MATLAB.
+                    </p>
+                    <p class="about-text">
+                        Currently pursuing a Communications and Electronics Engineering degree, 
+                        I blend technical expertise with creative problem-solving to build 
+                        responsive, user-friendly interfaces.
+                    </p>
+                    <p class="about-text">
+                        Eager to contribute my technical versatility and fresh perspectives 
+                        to an innovative team focused on exceptional digital experiences.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Ismailia, Egypt</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="info-label">Education</span>
+                                <span class="info-value">B.E. Comm & Electronics</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="info-label">Graduation</span>
+                                <span class="info-value">2028</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual scroll-reveal">
+                    <div class="visual-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-dot red"></span>
+                                    <span class="code-dot yellow"></span>
+                                    <span class="code-dot green"></span>
+                                </div>
+                                <pre class="code-content"><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Ibrahim"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"Front-End Dev"</span>,
+  <span class="code-property">skills</span>: [
+    <span class="code-string">"HTML5"</span>, <span class="code-string">"CSS3"</span>,
+    <span class="code-string">"JavaScript"</span>
+  ],
+  <span class="code-method">create</span>: () => <span class="code-string">"Amazing sites"</span>
+};</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag scroll-reveal">Capabilities</span>
+                <h2 class="section-title scroll-reveal">Skills & Expertise</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">
+                        <span class="category-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </span>
+                        Web Development
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="95">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS3</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">
+                        <span class="category-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </span>
+                        Programming
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-info">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-info">
+                                <span class="skill-name">MATLAB</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">
+                        <span class="category-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                        </span>
+                        Tools & Methods
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Flexbox</span>
+                        <span class="skill-tag">CSS Grid</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">
+                        <span class="category-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </span>
+                        Soft Skills
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Quick Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag scroll-reveal">Career Path</span>
+                <h2 class="section-title scroll-reveal">Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <span class="timeline-date">August 2024</span>
+                                <span class="timeline-type internship">Internship</span>
+                            </div>
+                            <h3 class="timeline-title">Intern - Technical Dept</h3>
+                            <p class="timeline-company">Suez Canal Authority, Ismailia</p>
+                            <ul class="timeline-points">
+                                <li>Gained exposure to advanced telecommunication systems</li>
+                                <li>Learned wireless and optical fiber transmission</li>
+                                <li>Observed electronics in large-scale infrastructure</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <span class="timeline-date">Apr - Oct 2022</span>
+                                <span class="timeline-type work">Work</span>
+                            </div>
+                            <h3 class="timeline-title">Pharmacy Assistant - IT</h3>
+                            <p class="timeline-company">El-Daba' Pharmacy, Ismailia</p>
+                            <ul class="timeline-points">
+                                <li>Managed operations using Beconnect software</li>
+                                <li>Assisted with inventory and troubleshooting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="certifications scroll-reveal">
+                <h3 class="certifications-title">Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4 class="cert-name">HTML & CSS</h4>
+                            <p class="cert-issuer">Mahara-Tech</p>
+                            <span class="cert-date">Sept 2024</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4 class="cert-name">Design Thinking</h4>
+                            <p class="cert-issuer">HP Life</p>
+                            <span class="cert-date">Feb 2024</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4 class="cert-name">Clean Code</h4>
+                            <p class="cert-issuer">Mahara-Tech</p>
+                            <span class="cert-date">Apr 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag scroll-reveal">Portfolio</span>
+                <h2 class="section-title scroll-reveal">Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <img src="pro.png" alt="portfolio photo" style="width: auto; height: auto;">
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://ibrahimkadry.github.io/Personal-website/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Portfolio Website">
+                                View
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JS</span>
+                        </div>
+                        <h3 class="project-title">previous Portfolio Website</h3>
+                        <p class="project-description">
+                            Personal portfolio with modern animations and responsive design.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                           <img src="rowad.png" alt="rowad photo" style="width: auto; height: auto;">
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://ibrahimkadry.github.io/Risk/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Risk Landing Page">
+                                View
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <h3 class="project-title">Risk Landing Page</h3>
+                        <p class="project-description">
+                            Conversion-focused landing page with smooth animations.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <img src="risk.png" alt="risk photo" style="height: auto; width: auto;">
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://ibrahimkadry.github.io/EL-Rowad/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View El-Rowad Maintenance System">
+                                View
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">Tailwind</span>
+                            <span class="project-tag">EmailJS</span>
+                        </div>
+                        <h3 class="project-title">El-Rowad System</h3>
+                        <p class="project-description">
+                            Maintenance reporting with EmailJS and form validation.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <img src="power.png" alt="power packs" style="height: auto; width: auto;">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-link coming-soon">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Bootstrap</span>
+                        </div>
+                        <h3 class="project-title">Fashion Hub</h3>
+                        <p class="project-description">
+                            E-commerce platform with dynamic UI elements.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                           <img src="c++.webp" alt="city management" style="height: auto; width: auto;">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-link coming-soon">Desktop App</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">OOP</span>
+                        </div>
+                        <h3 class="project-title">City Management</h3>
+                        <p class="project-description">
+                            C++ application with CRUD operations and file handling.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                           <img src="factory.jpg" alt="factory" style="height: auto; width: auto;">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-link coming-soon">Desktop App</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">MATLAB</span>
+                        </div>
+                        <h3 class="project-title">Factory System</h3>
+                        <p class="project-description">
+                            Employee and product data management system.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag scroll-reveal">Get In Touch</span>
+                <h2 class="section-title scroll-reveal">Contact Me</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info scroll-reveal">
+                    <p class="contact-text">
+                        I'm available for freelance work and new opportunities. 
+                        Feel free to reach out if you have a project in mind.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:hemasasa47@gmail.com" class="contact-link">
+                            <span class="link-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </span>
+                            <div class="link-content">
+                                <span class="link-label">Email</span>
+                                <span class="link-value">hemasasa47@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+201025649937" class="contact-link">
+                            <span class="link-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </span>
+                            <div class="link-content">
+                                <span class="link-label">Phone</span>
+                                <span class="link-value">+20 102 564 9937</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ibrahim-k-058769289" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <span class="link-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </span>
+                            <div class="link-content">
+                                <span class="link-label">LinkedIn</span>
+                                <span class="link-value">ibrahim-k-058769289</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/ibrahimkadry" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <span class="link-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </span>
+                            <div class="link-content">
+                                <span class="link-label">GitHub</span>
+                                <span class="link-value">ibrahimkadry</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container scroll-reveal">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <span class="logo-text">Ibrahim</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p class="footer-tagline">Building digital experiences with passion.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">2025 Ibrahim El-Kadry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
